@@ -1,4 +1,6 @@
 {% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +34,7 @@
                 <div id='box-right'>
                     <ul>
                         <li><a href="{% url 'signup' %}">SignIn</a></li>
-                        <li><a href="{% url 'login' %}">login</a></li>
+                        <li><a href="{% provider_login_url 'google' %}">login</a></li>
                         
                         <li><a href="#"><img src="{% static 'png/profile.png'%}" width="30" height="30"></a>
                             <ul><br>
